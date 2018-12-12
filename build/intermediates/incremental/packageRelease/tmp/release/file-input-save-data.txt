@@ -1,0 +1,11 @@
+#Internal package file, do not edit.
+#Sun Dec 09 20:32:42 CST 2018
+1.base=D\:\\workspaces\\androidstudio\\demo-fingerprint\\build\\intermediates\\transforms\\mergeJniLibs\\release\\0
+0.baseType=DIRECTORY
+1.baseType=DIRECTORY
+count=2
+1.set=NATIVE_RESOURCE
+0.path=classes.dex
+0.set=DEX
+0.base=D\:\\workspaces\\androidstudio\\demo-fingerprint\\build\\intermediates\\transforms\\dexMerger\\release\\0
+1.path=lib/armeabi/libDeviceAPI.so

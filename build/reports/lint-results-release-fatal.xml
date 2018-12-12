@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="4" by="lint 3.2.1">
+
+    <issue
+        id="ExtraTranslation"
+        severity="Fatal"
+        message="&quot;fingerprint_tab_fingerprintset&quot; is translated here but not found in default locale"
+        category="Correctness:Messages"
+        priority="6"
+        summary="Extra translation"
+        explanation="If a string appears in a specific language translation file, but there is no corresponding string in the default locale, then this string is probably unused. (It&apos;s technically possible that your application is only intended to run in a specific locale, but it&apos;s still a good idea to provide a fallback.)&#xA;&#xA;Note that these strings can lead to crashes if the string is looked up on any locale not providing a translation, so it&apos;s important to clean them up."
+        errorLine1="    &lt;string name=&quot;fingerprint_title_page_id&quot;>存储ID(0~254)&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\workspaces\androidstudio\demo-fingerprint\src\main\res\values-zh\strings.xml"
+            line="504"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ExpiredTargetSdkVersion"
+        severity="Fatal"
+        message="Google Play requires that apps target API level 26 or higher.&#xA;"
+        category="Compliance"
+        priority="8"
+        summary="TargetSdkVersion No Longer Supported"
+        explanation="As of the second half of 2018, Google Play requires that new apps and app updates target API level 26 or higher.&#xA;&#xA;Configuring your app to target a recent API level ensures that users benefit from significant security and performance improvements, while still allowing your app to run on older Android versions (down to the `minSdkVersion`).&#xA;&#xA;To update your `targetSdkVersion`, follow the steps from &quot;Meeting Google Play requirements for target API level&quot;,&#xA;https://developer.android.com/distribute/best-practices/develop/target-sdk.html"
+        url="https://support.google.com/googleplay/android-developer/answer/113469#targetsdk"
+        urls="https://support.google.com/googleplay/android-developer/answer/113469#targetsdk,https://support.google.com/googleplay/android-developer/answer/113469#targetsdk,https://developer.android.com/distribute/best-practices/develop/target-sdk.html"
+        errorLine1="        targetSdkVersion 15"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="D:\workspaces\androidstudio\demo-fingerprint\build.gradle"
+            line="35"
+            column="9"/>
+    </issue>
+
+</issues>

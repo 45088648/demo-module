@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/fingerprint_title_page_mode"
+            android:textColor="@color/gray" />
+
+        <RadioGroup android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbDef"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/fingerprint_title_page_mode_1"
+                android:textColor="@color/gray" />
+
+            <RadioButton
+                android:id="@+id/rbIso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fingerprint_title_page_mode_2"
+                android:textColor="@color/gray" />
+        </RadioGroup>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/fingerprint_title_page_id"
+            android:textColor="@color/gray" />
+
+        <EditText
+            android:id="@+id/etPageId"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:hint="@string/fingerprint_title_page_id"
+            android:inputType="numberSigned|textNoSuggestions"
+            android:maxLength="500"
+            android:paddingLeft="8.0dip"
+            android:paddingRight="8.0dip"
+            android:singleLine="true"
+            android:textColor="@color/deep_gray"
+            android:textCursorDrawable="@null"
+            android:textSize="16.0sp" />
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/fingerprint_title_name"
+            android:textColor="@color/gray" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:hint="@string/fingerprint_title_name"
+            android:inputType="textNoSuggestions"
+            android:maxLength="500"
+            android:paddingLeft="8.0dip"
+            android:paddingRight="8.0dip"
+            android:singleLine="true"
+            android:textColor="@color/deep_gray"
+            android:textCursorDrawable="@null"
+            android:textSize="16.0sp" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:gravity="center">
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:gravity="left">
+
+        <CheckBox
+            android:id="@+id/cbContinuous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fingerprint_title_auto_acquisition"
+            android:checked="false"
+            android:textColor="@color/gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dip"
+            android:text="@string/title_scan_between"
+            android:textColor="@color/gray" />
+
+        <EditText
+            android:id="@+id/et_between"
+            android:layout_width="50dip"
+            android:layout_height="wrap_content"
+            android:hint="0"
+            android:inputType="number"
+            android:singleLine="true"
+            android:text="1"></EditText>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="s" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:gravity="center">
+
+        <CheckBox
+            android:id="@+id/cbShowImg"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="false"
+            android:text="@string/fingerprint_title_show_img"
+            android:textColor="@color/gray" />
+
+        <CheckBox
+            android:id="@+id/cbShowImgIso"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:text="@string/fingerprint_title_show_imgiso"
+            android:textColor="@color/gray" />
+
+        <ImageView
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:id="@+id/ivFinger1"
+            android:layout_width="60dip"
+            android:layout_height="60dip" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/fingerprint_btn_save" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/ll_stat"
+            android:layout_width="fill_parent"
+            android:layout_height="45dip"
+            android:layout_gravity="bottom"
+            android:background="@drawable/layoutbg"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/title_scan_count"
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:id="@+id/tv_scan_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_weight="1"
+                android:text="@string/title_succ_count"
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:id="@+id/tv_succ_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dip"
+                android:layout_weight="1"
+                android:text="@string/title_fail_count"
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:id="@+id/tv_fail_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="0" />
+        </LinearLayout>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dip"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ivFinger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </TableRow>
+
+</LinearLayout>

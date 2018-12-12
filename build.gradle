@@ -1,0 +1,58 @@
+buildscript {
+    repositories {
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'//这里是你的AS版本
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        google()//maven仓库地址
+    }
+
+}
+/*task clean(type: Delete) {
+    delete rootProject.buildDir
+}*/
+
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 15
+    buildToolsVersion '28.0.3'
+
+    defaultConfig {
+        applicationId "com.example.fingerprint"
+        minSdkVersion 11
+        targetSdkVersion 15
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    //Add the following configuration
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:18.0.0'
+    compile files('libs/andbase.jar')
+    compile files('libs/xUtils-2.5.5.jar')
+    compile files('libs/cw-deviceapi(20170718).jar')
+}
+

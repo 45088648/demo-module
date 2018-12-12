@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_finger_del"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/fingerprint_menu_del" />
+    <item
+        android:id="@+id/action_finger_delall"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/fingerprint_menu_delall" />
+
+</menu>

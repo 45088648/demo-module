@@ -1,0 +1,4 @@
+#Tue Dec 11 11:20:10 CST 2018
+base.0=D\:\\workspaces\\androidstudio\\demo-fingerprint\\build\\intermediates\\transforms\\dexMerger\\release\\0
+path.0=classes.dex
+renamed.0=classes.dex
